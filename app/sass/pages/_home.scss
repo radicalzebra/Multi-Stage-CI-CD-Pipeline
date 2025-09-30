@@ -1,0 +1,44 @@
+.features {
+  grid-column: center-start/center-end;
+  position: relative;
+}
+.operations {
+  margin-top: -28rem;
+  grid-column: center-start/center-end;
+}
+.svg-0 {
+  grid-column: full-start/full-end;
+  z-index: -90;
+
+  &--1 {
+    transform: rotateX(179deg);
+  }
+}
+.testimonials {
+  margin-top: -10rem;
+
+  grid-column: center-start/center-end;
+  position: relative;
+
+  &__svg {
+    position: absolute;
+    right: -79rem;
+    &--1 {
+      left: -77rem;
+      top: -4rem;
+    }
+  }
+}
+.block-home {
+  grid-column: full-start/full-end;
+
+  text-align: center;
+  margin-top: 50rem;
+}
+.footer {
+  grid-column: full-start/full-end;
+  background-color: #0bffa63d;
+}
+section {
+  transition: all 0.4s ease;
+}

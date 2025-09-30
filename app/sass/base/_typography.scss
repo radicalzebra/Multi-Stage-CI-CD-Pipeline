@@ -1,0 +1,35 @@
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.heading-fourth {
+  color: $--color-primary;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.heading-sec {
+  font-weight: 400;
+  font-size: 5rem;
+  letter-spacing: -0.3rem;
+  line-height: 1.1;
+}
+.heading-tert {
+  color: $--color-primary;
+  font-size: 2.6rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+}
+.heading-sec2{
+  font-size: 3rem;
+    display: flex;
+    font-weight: 600;
+    align-items: baseline;
+  &__svg{
+    margin-right: .7rem;
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+}

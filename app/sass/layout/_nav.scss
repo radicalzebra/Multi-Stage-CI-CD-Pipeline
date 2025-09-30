@@ -1,0 +1,40 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 1.7rem;
+    &--1 {
+      padding: 6rem 8rem;
+      justify-content: center;
+      li {
+        margin: 0 !important;
+        padding: 0 3rem;
+      }
+    }
+  }
+
+  &__it-list {
+    cursor: pointer;
+    display: inline-block;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $--color-base;
+    }
+    &--1 {
+      &:link,
+      &:visited {
+        background-color: $--color-primary;
+        padding: 0.8rem 1.2rem;
+        color: white;
+        border-radius: 5px;
+      }
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+  }
+}

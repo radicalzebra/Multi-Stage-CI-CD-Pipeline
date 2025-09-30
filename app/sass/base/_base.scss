@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  overflow-x: hidden;
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(2rem, 8rem) [center-start] repeat(
+      8,
+      [col-start] minmax(14rem, 1fr) [col-end]
+    )
+    [center-end]
+    minmax(2rem, 8rem) [full-end];
+  grid-template-rows: 100vh repeat(5, min-content);
+}

@@ -1,0 +1,106 @@
+// @keyframes color {
+//   0% {
+//     fill: $--color-second;
+//   }
+//   100% {
+//     fill: $--;
+//   }
+// }
+@keyframes dollar {
+  0% {
+    opacity: 0;
+    transform: translateX(-0.5rem);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(0.4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes doll {
+  50% {
+    transform: translateX(-1.6rem);
+  }
+  70% {
+    transform: translateX(1.6rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+@keyframes mv {
+  100% {
+    transform: translateY(0.177777rem);
+  }
+}
+@keyframes sc {
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes brup {
+  100% {
+    transform: translateY(0.6rem);
+  }
+}
+@keyframes brup2 {
+  100% {
+    transform: translateY(0.4rem);
+  }
+}
+@keyframes io {
+  0% {
+    transform: translateX(-9rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes flow {
+  0% {
+    opacity: 0;
+    transform: translateY(-22rem);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes wave {
+  0% {
+    transform: rotateZ(6deg);
+  }
+  50% {
+    transform: rotateZ(-2deg);
+  }
+  90% {
+    transform: rotateZ(6deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: rotateZ(1deg);
+  }
+  50% {
+    transform: rotateZ(3deg);
+  }
+  90% {
+    transform: rotateZ(-9deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}

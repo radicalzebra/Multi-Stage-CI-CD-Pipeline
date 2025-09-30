@@ -1,0 +1,73 @@
+.test-box2{
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  height: 130%;
+  overflow: hidden;
+
+}
+.test {
+  &--1{
+    transform: translateX(0);
+  }
+  &--2{
+    transform: translateX(662px);
+  }
+  &--3{
+    transform: translateX(1324px);
+  }
+  top: 0;
+  left: 0;
+  text-align: center;
+  position: absolute;
+  transition: all .4s ease;
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin-top: 3rem;
+  }
+  &__svg {
+    cursor: pointer;
+    #head,
+    #tail {
+      transition: all 0.4s ease;
+    }
+    &:hover #head {
+      transform: translateX(0.2rem);
+    }
+    &:hover #tail {
+      transform: translateX(-0.3rem);
+    }
+    &--1 {
+      transform: rotateY(180deg);
+    }
+  }
+  &__img {
+    width: 5rem;
+    height: 5rem;
+  }
+  &__person {
+    display: flex;
+    align-items: center;
+  }
+  &__info {
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 1.4rem;
+  }
+  &__name {
+    color: #000000;
+    font-weight: regular;
+    display: block;
+  }
+  &__para {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  &__country {
+    display: block;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,86 @@
+.balance {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    align-items: center;
+    position: relative;
+
+    &__svg {
+        position: absolute;
+        left: 36rem;
+        z-index: -9;
+        opacity: .05;
+
+    }
+}
+
+.card {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.281);
+    display: grid;
+    align-content: center;
+    flex-direction: column;
+    color: white;
+    padding: 2rem;
+    flex: .8;
+    border-radius: 14px;
+    background-image: linear-gradient(to left, #2E186A, #0D0522);
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+
+        &--2 {
+            margin-left: 1.8rem;
+        }
+    }
+
+    &__bx {
+        display: flex;
+    }
+
+    &__title {
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: .8rem;
+    }
+
+    &__inf {
+        text-transform: capitalize;
+        font-size: 2rem;
+
+    }
+
+    &__end {
+        display: flex;
+    }
+
+    &__end &__st {
+        border-radius: 50%;
+        width: 2.7rem;
+        height: 2.7rem;
+        display: inline-block;
+        background-color: white;
+
+    }
+
+    &__end &__st--1 {
+        opacity: .5;
+        margin-right: -1.4rem;
+    }
+
+    &__st {
+        &--1 {}
+    }
+
+    &__no {
+        margin: 2.4rem 0;
+        font-size: 2.3rem;
+    }
+
+}

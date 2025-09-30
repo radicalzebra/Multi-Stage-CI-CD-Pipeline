@@ -1,0 +1,118 @@
+.header {
+  grid-column: full-start/full-end;
+  background-color: $--color-background;
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  grid-template-rows: min-content 1fr;
+  align-items: center;
+  position: relative;
+  padding: 0 8rem;
+  &__top {
+    padding: 1.6rem 0;
+    display: flex;
+    align-items: center;
+    grid-column: 1/-1;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 12rem;
+    display: flex;
+    align-items: center;
+  }
+  &__logo-img {
+    width: 100%;
+  }
+  &__main {
+    z-index: 899;
+  }
+  &__heading {
+    font-size: 7.8rem;
+    font-weight: 600;
+
+    line-height: 1.1;
+    letter-spacing: -0.5rem;
+    span {
+      color: $--color-second;
+    }
+  }
+  &__svg {
+    #brow2 {
+      transform: translateY(1rem);
+      animation: brup2 1s 2.5s ease forwards;
+    }
+    #hair {
+      animation: mv 1s 2.5s ease forwards;
+    }
+    #mouth {
+      transform: scaleY(1.01);
+      animation: sc 1s 2.5s ease forwards;
+    }
+    // #eye,
+    // #eye II {
+    //   animation: sc 1s 3s ease;
+    // }
+    #brow {
+      transform: translateY(1rem);
+      animation: brup 1s 2.5s ease forwards;
+    }
+    #money1 {
+      animation: flow 0.8s 0.9s ease-in backwards;
+    }
+    #money2 {
+      animation: flow 0.8s 1.3s ease-in backwards;
+    }
+    #money3 {
+      animation: flow 0.8s 1.9s ease-in backwards;
+    }
+    #money4 {
+      animation: flow 0.8s 2.3s ease-in backwards;
+    }
+
+    grid-column: 2/-1;
+    width: 100%;
+    grid-row: 2/3;
+    height: 79%;
+    z-index: 67;
+  }
+  &__para {
+    font-size: 1.9rem;
+    color: $--color-cl;
+  }
+  &__btn-bx {
+    position: relative;
+  }
+  //   &__anim-svg {
+  //     position: absolute;
+  //     left: 0;
+  //     top: 1.2rem;
+  //     width: 3rem;
+  //     height: 3rem;
+  //     transform: translateX(-6rem);
+  //     transition: all 0.4s ease-in;
+  //     opacity: 0;
+  //   }
+}
+.svg {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 80%;
+  top: 25rem;
+  opacity: 0.5;
+}
+.sticky {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 777777;
+  padding: 2rem 8rem;
+  color: black;
+  background-color: #edf8f4;
+  box-shadow: 0 0.3rem 2rem rgba(0, 0, 0, 0.247);
+}
+
+.sec-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+    <title>BANKIST</title>
+    <script type="module" defer src="dashboard.js"></script>
+</head>
+
+<body data-run="second">
+    <main class="container-2" >
+        <nav class="nav2">
+           <ul class="nav2__list">
+               <li class="nav2__item ">
+                   <svg>
+                       <use xlink:href="img/sprite.svg#icon-icon5"></use>
+                   </svg>
+               </li>
+               <li class="nav2__item">
+                <svg>
+                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                </svg>
+            </li>
+           </ul>
+        </nav>
+        <section class="acc-info">
+            <div class="account-info">
+                <div class="user">
+                    <img src="img/user.jpeg" class="user__img" alt="user">
+                    <span class="user__name">John Smith</span>
+                    <span class="user__email">johnsmith@gmail.com</span>
+                </div>
+                <form action="#" class="account-info__form">
+                    <input type="text" class="account-info__inp" placeholder="Search">
+                    <button type="submit" class="account-info__btn">
+                        <svg class="account-info__svg">
+                            <use xlink:href="img/sprite.svg#icon-12"></use>
+                        </svg>
+                    </button>
+                </form>
+
+            </div>
+            <div class="balance">
+                <svg class="balance__svg" xmlns="http://www.w3.org/2000/svg" width="154" height="154" viewBox="0 0 154 154">
+                    <g opacity="1" 
+                    style="mix-blend-mode:darken;isolation:isolate">
+                    <path d="M451.794,85.055V205.805a4.512,4.512,0,0,0,4.512,4.512h9.085a4.512,4.512,0,0,0,4.512-4.512V85.055a4.512,4.512,0,0,0-4.512-4.512h-9.085A4.512,4.512,0,0,0,451.794,85.055Z" transform="translate(-315.903 -56.317)"/><path d="M361.426,4.512V125.262a4.512,4.512,0,0,0,4.512,4.512h9.085a4.512,4.512,0,0,0,4.512-4.512V4.512A4.512,4.512,0,0,0,375.023,0h-9.085A4.512,4.512,0,0,0,361.426,4.512Z" transform="translate(-252.716)"/><path d="M271.173,85.051l-.1,120.751a4.512,4.512,0,0,0,4.512,4.516h9.081a4.512,4.512,0,0,0,4.512-4.512V85.055a4.512,4.512,0,0,0-4.512-4.512h-8.979A4.512,4.512,0,0,0,271.173,85.051Z" transform="translate(-189.538 -56.317)"/><path d="M90.322,85.055V205.805a4.512,4.512,0,0,0,4.512,4.512h9.085a4.512,4.512,0,0,0,4.512-4.512V85.055a4.512,4.512,0,0,0-4.512-4.512H94.834A4.512,4.512,0,0,0,90.322,85.055Z" transform="translate(-63.155 -56.317)"/><path d="M180.69,4.512V125.262a4.512,4.512,0,0,0,4.512,4.512h9.085a4.512,4.512,0,0,0,4.512-4.512V4.512A4.512,4.512,0,0,0,194.287,0H185.2A4.512,4.512,0,0,0,180.69,4.512Z" transform="translate(-126.342)"/><path d="M0,4.512V125.262a4.512,4.512,0,0,0,4.512,4.512h9.057a4.512,4.512,0,0,0,4.512-4.512V4.512A4.512,4.512,0,0,0,13.569,0H4.512A4.512,4.512,0,0,0,0,4.512Z"/></g>
+                    </svg>
+                <div class="card">
+                    <div class="card__top">
+                        <div class="card__info">
+                            <span class="card__title">Card Name</span>
+                            <span class="card__inf">john smith</span>
+                        </div>
+                        <div class="card__end">
+                            <span class="card__st card__st--1"></span>
+                            <span class="card__st"></span>
+                        </div>
+                    </div>
+                    <div class="card__no">
+                        <span class="card__num">
+                            * * * * * * * * * * * * * * * * <span class="card__main"> 5431</span>
+                        </span>
+                    </div>
+
+                    <div class="card__bx">
+                        <div class="card__info card__info--1">
+                            <span class="card__title">Exp Date</span>
+                            <span class="card__inf">10/24</span>
+                        </div>
+                        <div class="card__info card__info--2">
+                            <span class="card__title">Cvv Number</span>
+                            <span class="card__inf">818</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="accbalance">
+                    <h2 class="heading-sec2">
+                        <svg class="heading-sec2__svg">
+                            <use xlink:href="img/sprite.svg#icon-hello"></use>
+                        </svg>
+                        Total balance
+                    </h2>
+                    <span class="accbalance__main">$45,500</span>
+                </div>
+            </div>
+            <div class="transactions">
+                <h2 class="heading-sec2">
+                    <svg class="heading-sec2__svg">
+                        <use xlink:href="img/sprite.svg#icon-hello"></use>
+                    </svg>
+                    Transactions
+                </h2>
+                <ul class="transact">
+                  
+                </ul>
+            </div>
+        </section>
+        <section class="account-transact">
+            <div class="logout">
+                <svg class="logout__svg">
+                    <use xlink:href="img/sprite.svg#icon-icon7"></use>
+                </svg>
+                <span class="logout__sp">Log Out</span>
+            </div>
+            <div class="main-box">
+                <div class="box box--transfer">
+                    <h2 class="heading-sec2">
+                        <svg class="heading-sec2__svg">
+                            <use xlink:href="img/sprite.svg#icon-Group"></use>
+                        </svg>
+                        Transfer Money
+                    </h2>
+                    <form action="#" class="form form--transfer">
+                     
+                        <input type="text" class="form__inp" placeholder="Transfer To">
+                  
+                        <div class="form__sub">
+                            <input type="number" placeholder="Amount" class="form__amt">
+                            <button type="submit" class="form__btn">
+                                <svg class="form__svg" xmlns="http://www.w3.org/2000/svg" width="36.662" height="30.5"
+                                    viewBox="0 0 36.662 30.5">
+                                    <path
+                                        d="M36.076,55.172l-13.24-13.24a2.012,2.012,0,0,0-2.838,0l-1.2,1.2a1.992,1.992,0,0,0-.586,1.419,2.031,2.031,0,0,0,.586,1.435l7.724,7.741H1.981A1.958,1.958,0,0,0,0,55.7v1.7a2.033,2.033,0,0,0,1.981,2.06H26.608L18.8,67.246a1.987,1.987,0,0,0,0,2.818l1.2,1.2a2.013,2.013,0,0,0,2.838,0l13.24-13.24a2.024,2.024,0,0,0,0-2.848Z"
+                                        transform="translate(0 -41.346)" fill="#fff" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="box box--loan">
+                    <h2 class="heading-sec2">
+                        <svg class="heading-sec2__svg">
+                            <use xlink:href="img/sprite.svg#icon-loan"></use>
+                        </svg>
+                        Request Loan
+                    </h2>
+                    <form action="#" class="form form--loan">
+                        <div class="form__sub">
+                            <input type="number" placeholder="Amount" class="form__amt form__amt--1">
+                            <button type="submit" class="form__btn form__btn--1">
+                                <svg class="form__svg" xmlns="http://www.w3.org/2000/svg" width="36.662" height="30.5"
+                                    viewBox="0 0 36.662 30.5">
+                                    <path
+                                        d="M36.076,55.172l-13.24-13.24a2.012,2.012,0,0,0-2.838,0l-1.2,1.2a1.992,1.992,0,0,0-.586,1.419,2.031,2.031,0,0,0,.586,1.435l7.724,7.741H1.981A1.958,1.958,0,0,0,0,55.7v1.7a2.033,2.033,0,0,0,1.981,2.06H26.608L18.8,67.246a1.987,1.987,0,0,0,0,2.818l1.2,1.2a2.013,2.013,0,0,0,2.838,0l13.24-13.24a2.024,2.024,0,0,0,0-2.848Z"
+                                        transform="translate(0 -41.346)" fill="#fff" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="box box--cl">
+                    <h2 class="heading-sec2">
+                        <svg class="heading-sec2__svg">
+                            <use xlink:href="img/sprite.svg#icon-money"></use>
+                        </svg>
+                        Close Account
+                    </h2>
+                    <form action="#" class="form form--cl">
+                        <input type="text" class="form__inp" placeholder="User Name">
+                        <div class="form__sub">
+                            <input type="number" placeholder="Pin" class="form__amt ">
+                            <button type="submit" class="form__btn">
+                                <svg class="form__svg" xmlns="http://www.w3.org/2000/svg" width="36.662" height="30.5"
+                                    viewBox="0 0 36.662 30.5">
+                                    <path
+                                        d="M36.076,55.172l-13.24-13.24a2.012,2.012,0,0,0-2.838,0l-1.2,1.2a1.992,1.992,0,0,0-.586,1.419,2.031,2.031,0,0,0,.586,1.435l7.724,7.741H1.981A1.958,1.958,0,0,0,0,55.7v1.7a2.033,2.033,0,0,0,1.981,2.06H26.608L18.8,67.246a1.987,1.987,0,0,0,0,2.818l1.2,1.2a2.013,2.013,0,0,0,2.838,0l13.24-13.24a2.024,2.024,0,0,0,0-2.848Z"
+                                        transform="translate(0 -41.346)" fill="#fff" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="spent-bx">
+                    <div class="spent">
+                        <div class="spent__flex">
+                            <span class="spent__name">Food&Drink</span>
+                            <svg class="spent__svg">
+                                <use xlink:href="img/sprite.svg#icon-Page-1"></use>
+                            </svg>
+                        </div>
+                        <div class="spent__box">
+                            <div class="spent__t">
+                                <span class="spent__perc">12%</span>
+                                <div class="spent__bar"></div>
+                                <div class="spent__in-bar"></div>
+                            </div>
+                            <span class="spent__amt">$200</span>
+                        </div>
+                    </div>
+                    <div class="spent">
+                        <div class="spent__flex">
+                            <span class="spent__name">Entertainment</span>
+                            <svg class="spent__svg">
+                                <use xlink:href="img/sprite.svg#icon-video-camera"></use>
+                            </svg>
+                        </div>
+                        <div class="spent__box">
+                            <div class="spent__t">
+                                <span class="spent__perc">24%</span>
+                                <div class="spent__bar"></div>
+                                <div class="spent__in-bar"></div>
+                            </div>
+                            <span class="spent__amt">$400</span>
+                        </div>
+                    </div>
+                    <div class="spent">
+                        <div class="spent__flex">
+
+                            <span class="spent__name">Travel</span>
+                            <svg class="spent__svg">
+                                <use xlink:href="img/sprite.svg#icon-Page-1"></use>
+                            </svg>
+                        </div>
+                        <div class="spent__box">
+                            <div class="spent__t">
+                                <span class="spent__perc">12%</span>
+                                <div class="spent__bar"></div>
+                                <div class="spent__in-bar"></div>
+                            </div>
+                            <span class="spent__amt">$300</span>
+                        </div>
+                    </div>
+                     <div class="spent"> 
+                        <div class="spent__flex">
+
+                            <span class="spent__name">Other</span>
+                            <svg class="spent__svg">
+                                <use xlink:href="img/sprite.svg#icon-Page-1"></use>
+                            </svg>
+                        </div>
+                        <div class="spent__box">
+                            <div class="spent__t">
+                                <span class="spent__perc">12%</span>
+                                <div class="spent__bar"></div>
+                                <div class="spent__in-bar"></div>
+                            </div>
+                            <span class="spent__amt">$300</span>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

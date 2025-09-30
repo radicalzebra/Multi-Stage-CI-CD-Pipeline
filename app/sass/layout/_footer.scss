@@ -1,0 +1,9 @@
+.footer {
+  position: relative;
+  &__svg {
+    position: absolute;
+    top: -4px;
+    left: -28px;
+    transform: rotateZ(8deg);
+  }
+}

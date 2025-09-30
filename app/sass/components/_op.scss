@@ -1,0 +1,63 @@
+.op-box {
+  position: relative;
+  &::after {
+    content: url(../../img/dollar.svg);
+    position: absolute;
+    top: 6.7rem;
+  }
+}
+.op-box-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.op {
+  text-align: center;
+  background-color: #edf8f4;
+  padding: 8rem 16rem;
+  z-index: -8;
+  box-shadow: 0 1rem 2rem rgba(37, 37, 37, 0.151);
+  position: relative;
+  border-radius: 2px;
+
+  &__svg {
+    position: absolute;
+    right: -22.5rem;
+    top: 71px;
+
+    #handd {
+      transform-origin: left;
+      animation: wave 1s ease-in-out forwards;
+    }
+  }
+  &__para {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  &__head {
+    padding: 1.7rem 5rem;
+    width: 30%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 7rem;
+    cursor: pointer;
+    box-shadow: 0 0.3rem 1rem rgba(202, 202, 202, 0.493);
+    transition: all 0.4s ease;
+    &:not(:first-child) {
+      margin-left: -2rem;
+    }
+    &--1 {
+      background-color: $--color-second;
+      color: white;
+    }
+    &--2 {
+      background-color: $--color-primary;
+      color: white;
+    }
+    &--3 {
+      background-color: #968bb4;
+      color: white;
+    }
+  }
+}

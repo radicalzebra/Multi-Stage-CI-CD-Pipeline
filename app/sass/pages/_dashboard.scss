@@ -1,0 +1,139 @@
+:root {
+  --color-blue: #2e186a;
+  --color-green: #edf8f4;
+  --color-black: #000000;
+  --color-orange: #fe7624;
+}
+.confirm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 88888;
+  background-color: var(--color-blue);
+  padding: 2.4rem 6rem;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+
+  button {
+    padding: 1rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    background-color: var(--color-orange);
+
+    color: currentColor;
+  }
+}
+.container-2 {
+  display: grid;
+  grid-template-columns: minmax(4rem, max-content) minmax(min-content, 1fr) minmax(
+      min-content,
+      40%
+    );
+
+  & > * {
+    padding: 0 2rem;
+    padding-top: 2rem;
+  }
+}
+
+.nav2 {
+  min-height: 100vh;
+  max-height: 130vh;
+  background-color: var(--color-blue);
+  padding: 0;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    padding: 1.6rem 2rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 0%;
+      height: 100%;
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.2s ease-in-out;
+      z-index: 0;
+    }
+
+    &:hover::before {
+      width: 100%;
+      box-shadow: 0 0.3rem 0.7rem rgba(255, 255, 255, 0.342);
+    }
+
+    &:hover svg use {
+      fill: var(--color-blue);
+    }
+  }
+
+  &__list svg {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    z-index: 3330;
+
+    use {
+      fill: white;
+    }
+  }
+}
+
+.acc-info {
+  display: grid;
+  grid-template-rows: min-content min-content 1fr;
+}
+
+.account-transact {
+  background-color: var(--color-green);
+  box-shadow: 3rem 0 5rem rgba(0, 0, 0, 0.329);
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  margin-top: 1.7rem;
+  cursor: pointer;
+  justify-content: flex-end;
+
+  &:hover {
+    svg use {
+      transform: translateX(0.4rem);
+      fill: var(--color-orange);
+    }
+  }
+
+  &__svg {
+    use {
+      transition: all 0.2s ease-in-out;
+      fill: var(--color-blue);
+    }
+
+    overflow: visible;
+
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__sp {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+  }
+}
+
+.main-box {
+  display: grid;
+}
