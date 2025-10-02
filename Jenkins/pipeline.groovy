@@ -1,38 +1,61 @@
 pipeline {
     agent any
 
+    environment {
+        SCRIPT_PATH = "Jenkins/scripts/"
+    }
+
     stages {
-        stage('CLONE') {
+        
+        stage('CHECKOUT') {
             steps {
                 echo 'Cloning git repo..'
                 git url: "https://github.com/radicalzebra/Multi-Stage-CI-CD-Pipeline.git", branch: "main"
                 echo "Successfully Cloned repo..."
             }
         }
+    
        
-       stage('BUILD & PUSH') {
+       stage('BUILD IMAGE') {
          steps {
             echo 'Building & Pushing Docker image..'
             
             withCredentials([usernamePassword(
             credentialsId:'docker-hub-cred',
-            passwordVariable:'dockerHubPass',
-            usernameVariable:'dockerHubUser')]){
+            usernameVariable: 'DOCKER_USER',
+            passwordVariable: 'DOCKER_PASS')]){
 
                 sh '''
-                    echo "$dockerHubPass" | docker login -u "$dockerHubUser" --password-stdin
-                    docker build -t $dockerHubUser/bankist:latest .
-                    docker push $dockerHubUser/bankist:latest
+                    chmod +x ${SCRIPT_PATH}/buildImage.sh
+                    ./${SCRIPT_PATH}/buildImage.sh
 
                    '''
-
-            //   sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
-            //   sh "docker build -t ${env.dockerHubUser}/bankist:latest  . "
-            //   sh "docker push ${env.dockerHubUser}/bankist:latest"
             }
 
-            echo 'Docker Image pushed succesfully...'
+            echo 'Docker Image built succesfully...'
          }
+       }
+
+       stage('PUSH IMAGE'){
+        steps{
+
+            echo "Running a trivy scan for docker image..."
+
+            withCredentials([usernamePassword(
+            credentialsId:'docker-hub-cred',
+            usernameVariable: 'DOCKER_USER',
+            passwordVariable: 'DOCKER_PASS')]){
+
+                sh '''
+    
+                    chmod +x ${SCRIPT_PATH}/pushImage.sh
+                    ./${SCRIPT_PATH}/pushImage.sh
+
+                '''
+            {
+
+            echo "Scanned docker image, it's good to go"
+        }
        }
        
     }
