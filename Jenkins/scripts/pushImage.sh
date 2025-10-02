@@ -3,14 +3,10 @@
 set -e #ensures the script exits immediately on non-zero return codes.
 
 
-echo "$DOCKER_USER"
-echo "$HOME"
-
-
 # Trivy scan built image
 docker run --rm \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v $HOME/.cache:/root/.cache/ \
+  -v $HOME/trivy-cache:/root/.cache/ \
   aquasec/trivy:latest image \
   --severity HIGH,CRITICAL \
   --exit-code 1 \
@@ -23,7 +19,7 @@ docker run --rm \
 mkdir -p trivy-reports
 docker run --rm \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -v $HOME/.cache:/root/.cache/ \
+  -v $HOME/trivy-cache:/root/.cache/ \
   aquasec/trivy:latest image \
   --format json \
   --output trivy-reports/full-scan.json \
