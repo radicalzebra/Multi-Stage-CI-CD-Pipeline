@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SCRIPT_PATH = "Jenkins/scripts/"
+        SCRIPT_PATH = "Jenkins/scripts"
     }
 
     stages {
@@ -18,7 +18,7 @@ pipeline {
        
        stage('BUILD IMAGE') {
          steps {
-            echo 'Building & Pushing Docker image..'
+            echo 'Building Docker image..'
             
             withCredentials([usernamePassword(
             credentialsId:'docker-hub-cred',

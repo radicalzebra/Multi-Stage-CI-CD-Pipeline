@@ -2,6 +2,10 @@
 
 set -e #ensures the script exits immediately on non-zero return codes.
 
+
+echo "$DOCKER_USER"
+
+
 # Trivy scan built image
 docker run --rm \
   -v /var/run/docker.sock:/var/run/docker.sock \  #lets Trivy talk to Docker daemon
