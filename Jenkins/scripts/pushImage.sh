@@ -7,27 +7,27 @@ echo "$DOCKER_USER"
 echo "$HOME"
 
 
-# # Trivy scan built image
-# docker run --rm \
-#   -v /var/run/docker.sock:/var/run/docker.sock \  #lets Trivy talk to Docker daemon
-#   -v $HOME/.cache:/root/.cache/ \  #mount cache (faster subsequent scans)
-#   aquasec/trivy:latest image \
-#   --severity HIGH,CRITICAL \
-#   --exit-code 1 \
-#   $DOCKER_USER/bankist:latest
+# Trivy scan built image
+docker run --rm \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v $HOME/.cache:/root/.cache/ \
+  aquasec/trivy:latest image \
+  --severity HIGH,CRITICAL \
+  --exit-code 1 \
+  "$DOCKER_USER/bankist:latest"
 
 
 
 
-# #Full Trivy report (JSON, saved for logs)
-# mkdir -p trivy-reports
-# docker run --rm \
-#   -v /var/run/docker.sock:/var/run/docker.sock \
-#   -v $HOME/.cache:/root/.cache/ \
-#   aquasec/trivy:latest image \
-#   --format json \
-#   --output trivy-reports/full-scan.json \
-#   "$DOCKER_USER/bankist:latest"
+#Full Trivy report (JSON, saved for logs)
+mkdir -p trivy-reports
+docker run --rm \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v $HOME/.cache:/root/.cache/ \
+  aquasec/trivy:latest image \
+  --format json \
+  --output trivy-reports/full-scan.json \
+  "$DOCKER_USER/bankist:latest"
 
 
 
