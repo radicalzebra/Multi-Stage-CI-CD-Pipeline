@@ -52,7 +52,7 @@ pipeline {
                     ./${SCRIPT_PATH}/pushImage.sh
 
                 '''
-            {
+            }
 
             echo "Scanned docker image, it's good to go"
         }
