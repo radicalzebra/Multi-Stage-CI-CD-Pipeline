@@ -4,6 +4,7 @@ set -e #ensures the script exits immediately on non-zero return codes.
 
 
 echo "$DOCKER_USER"
+echo "$HOME"
 
 
 # # Trivy scan built image
